@@ -53,11 +53,38 @@ router.post('/', (req, res) => {
         });
 });
 
+//post request for user login
+router.put('/login', (req, res) => {
+    //expects {email: exmaple@example.com, password: 'example}
+    //querying user tablel to find a specific user
+    User.findOne({
+        where: {
+            email: req.body.email
+        }
+    }).then(dbUserData => {
+        if(!dbUserData) {
+            res.status(400).json({ message: 'No user with that email address!' });
+            return;
+        }
+        //Verify user
+        //checkpassword method returns a boolean
+        // checking if password matches if not send error message
+        const validPassword = dbUserData.checkPassword(req.body.password);
+        if (!validPassword) {
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
+        }
+
+        res.json({ user: dbUserData, message: 'You are now logged in!' });
+    })
+})
+
 //PUT update user info by id /api/users/1
 router.put('/:id', (req, res) => {
     //Using User model to update user info with user id in request
     // expects { username: 'example', email: 'example@example.com', password: 'example'}
     User.update(req.body, {
+        individualHooks: true,
         where: {
             id: req.params.id
         }
