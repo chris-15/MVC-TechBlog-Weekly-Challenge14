@@ -54,7 +54,7 @@ router.post('/', (req, res) => {
 });
 
 //post request for user login
-router.put('/login', (req, res) => {
+router.post('/login', (req, res) => {
     //expects {email: exmaple@example.com, password: 'example}
     //querying user tablel to find a specific user
     User.findOne({
