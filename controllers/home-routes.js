@@ -32,4 +32,8 @@ router.get("/", (req, res) => {
     });
 });
 
+// route to display log in page
+router.get('/login', (req, res) => {
+    res.render('login');
+})
 module.exports = router;
