@@ -37,10 +37,9 @@ Post.init(
     {
     //import sequilize connection
     sequelize,
-    timestamps: false, // dont auto create createdAt/updatedAt timestamp fields
     freezeTableName: true, // dont pluralize name of db table
     underscored: true, //underscores instead of camel case
-    modelName: "user", // model name stays lowercase in db
+    modelName: "post", // model name stays lowercase in db
     }
 );
 

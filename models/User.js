@@ -57,16 +57,20 @@ User.init(
       },
       // set up beforeUpdate lifecylce hook functionality to hash password using bcrypt when password is updated
       async beforeUpdate(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password,10);
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
         return updatedUserData;
       },
     },
 
     //import sequilize connection
     sequelize,
+    timestamps: false, // dont auto create createdAt/updatedAt timestamp fields
     freezeTableName: true, // dont pluralize name of db table
     underscored: true, //underscores instead of camel case
-    modelName: "post", // model name stays lowercase in db
+    modelName: "user", // model name stays lowercase in db
   }
 );
 
