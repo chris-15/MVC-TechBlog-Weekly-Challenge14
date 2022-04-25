@@ -1,12 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-//create Post model
-class Post extends Model {}
+// create Comment model
+class Comment extends Model {}
 
-//defining columns for post tabel
-Post.init(
+Comment.init(
     {
+        // columns
         // id column that is autoincremented number, primary key and not null values
         id: {
             type: DataTypes.INTEGER,
@@ -14,13 +14,8 @@ Post.init(
             primaryKey: true,
             autoIncrement: true
         },
-        //posts title column that is string and no null values
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        // posts text column that is a string and no null
-        post_text: {
+        // comment text column that is a string no null values and is atleast 1 character long
+        comment_text: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -32,17 +27,25 @@ Post.init(
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
+                key: 'id'   
+            }
+        },
+        // post id column that references post models id
+        post_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'post',
                 key: 'id'
             }
         }
     },
     {
-    //import sequilize connection
-    sequelize,
-    freezeTableName: true, // dont pluralize name of db table
-    underscored: true, //underscores instead of camel case
-    modelName: "post", // model name stays lowercase in db
+        //import sequilize connection
+        sequelize,
+        freezeTableName: true, // dont pluralize name of db table
+        underscored: true, //underscores instead of camel case
+        modelName: "comment", // model name stays lowercase in db
     }
 );
 
-module.exports = Post;
+module.exports = Comment;
