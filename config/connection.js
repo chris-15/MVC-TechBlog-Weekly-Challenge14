@@ -5,6 +5,7 @@ require("dotenv").config();
 //create connection to tech_blog_db
 let sequelize;
 
+// connect to jawsdb for herkou site or connnect to local mysql db
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
