@@ -56,12 +56,13 @@ router.post('/', (req, res) => {
 //post request for user login
 router.post('/login', (req, res) => {
     //expects {email: exmaple@example.com, password: 'example}
-    //querying user tablel to find a specific user
+    //querying user table to find a specific user
     User.findOne({
         where: {
             email: req.body.email
         }
     }).then(dbUserData => {
+        // checks to see if email is in table if not send error message
         if(!dbUserData) {
             res.status(400).json({ message: 'No user with that email address!' });
             return;
