@@ -1,3 +1,4 @@
+// function to handle sign up form
 async function signupFormHandler(event) {
   event.preventDefault();
 
@@ -25,6 +26,7 @@ async function signupFormHandler(event) {
   }
 }
 
+// function to handle login form
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -50,6 +52,8 @@ async function loginFormHandler(event) {
   }
 }
 
+
+//event listeners 
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
