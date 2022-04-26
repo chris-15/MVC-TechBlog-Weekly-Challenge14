@@ -2,11 +2,15 @@
   {{#each posts as |post|}}
   <li>
     <article class="post">
-
+      
       <div class="title">
+        <a href="/post/{{post.id}}">
         <h3>{{title}}</h3>
+        </a>
         <h4>Posted by {{user.username}}</h4>
+        <a href="/post/{{post.id}}">{{post.comments.length}} comment(s)</a>
       </div>
+
      
       <div class="post-text">
          {{post_text}} 
