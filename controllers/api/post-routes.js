@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../../models");
+const withAuth = require('../../utils/auth');
 
 // get all posts /api/posts/
 router.get("/", (req, res) => {
@@ -64,7 +65,7 @@ router.get("/:id", (req, res) => {
 });
 
 // POST create posts /api/posts/
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   // expects {title: 'example', post_text: 'example', user_id: 1}
   Post.create({
     title: req.body.title,
@@ -79,7 +80,7 @@ router.post("/", (req, res) => {
 });
 
 //PUT update posts title  by id/api/posts/1
-router.put("/:id", (req, res) => {
+router.put("/:id", withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
@@ -104,7 +105,7 @@ router.put("/:id", (req, res) => {
 });
 
 //DELETE delete post by id /api/posts/1
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Post.destroy({
     where: {
       id: req.params.id,
