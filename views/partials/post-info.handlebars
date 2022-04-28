@@ -5,7 +5,7 @@
       <h3>{{title}}</h3>
     </a>
     <h4>Posted by {{user.username}}</h4>
-    <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
 
   <div class="post-text">
