@@ -27,7 +27,18 @@ header {
     padding: 0 1%
 }
 
-/* post info */
+/* single post */
+#single-post-div {
+    width: 75%;
+    margin: auto;
+
+}
+.post {
+    border-style: solid;
+    margin-bottom: 6px;
+}
+
+/* homepage post info */
 
 .post-list{
     list-style-type: none;
@@ -36,7 +47,6 @@ header {
 }
 
 .post-li {
-    border-style: solid;
     margin-bottom: 6px;
 }
 
@@ -71,6 +81,7 @@ padding: 6px 0px
 
 
 /* dashboard styling */
+
 #db-create-new {
     display: flex;
     justify-content: center;
@@ -88,7 +99,6 @@ padding: 6px 0px
 }
 
 
-
 .dashboard-posts {
     width: 75%;
     margin: auto;
@@ -99,12 +109,56 @@ padding: 6px 0px
 }
 
 .db-singlepost {
-    border-style: solid;
     margin-bottom: 6px;
 }
 
 #db-yourposts {
     display: flex;
     justify-content: center;
+}
+
+
+
+
+/* edit post page styling */
+.edit-post {
+    display: flex;
+    flex-direction: column;
 
 }
+#edit-post-heading {
+    display: flex;  
+    justify-content: center;
+}
+
+.edit-post-form{
+    margin: 0 auto;
+}
+
+.divs-edit-form {
+    margin-bottom: 10px;
+}
+
+/* comment section id edit post page */
+#view-comments {
+    display: flex; 
+    justify-content: center;
+}
+
+.comment-form {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px
+}
+
+/* comments */
+.comment {
+    padding: 6px;
+    margin-bottom: 6px;
+}
+.comment:nth-child(odd) {
+    background-color: #524632;
+    color: white;
+  }
+

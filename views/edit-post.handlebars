@@ -1,16 +1,16 @@
-<article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
+ <a href="/dashboard"> &larr; Back to dashboard</a>
+<article class="edit-post">
+  <h2 id="edit-post-heading">
     Edit Post
   </h2>
   <form class="edit-post-form">
-    <div>
+    <div class="divs-edit-form">
       <input name="post-title" type="text" value="{{post.title}}" />
     </div>
-    <div>
-      <textarea name="post-text" type="text">{{post.post_text}}</textarea>
+    <div class="divs-edit-form">
+      <textarea name="post-text" type="text" rows="4" cols="50" >{{post.post_text}}</textarea>
     </div>
-    <div>
+    <div class="divs-edit-form">
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
     <button type="submit">Save post</button>
@@ -18,9 +18,12 @@
   </form>
 </article>
 
+  <h2 id="view-comments">
+    Comments
+  </h2>
 <form class="comment-form">
   <div>
-    <textarea name="comment-body"></textarea>
+    <textarea name="comment-body" rows="4" cols="50"></textarea>
   </div>
 
   <div>
