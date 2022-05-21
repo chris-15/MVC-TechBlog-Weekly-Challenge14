@@ -1,10 +1,11 @@
 <article class="post">
 
   <div class="title">
-    <a href="/post/{{id}}">
-      <h3>{{title}}</h3>
+   
+    <h4 id="posted-by">Posted by {{user.username}}</h4>
+     <a class="link" href="/post/{{id}}">
+      <h3 id="title-heading">{{title}}</h3>
     </a>
-    <h4>Posted by {{user.username}}</h4>
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
   </div>
 

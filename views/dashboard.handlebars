@@ -1,25 +1,25 @@
 <section>
-  <h2>Create New Post</h2>
+  <h2 id="db-create-new">Create New Post</h2>
 
   <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+    <div id="new-post-title-div">
+      <label for="create-post-title">Title</label>
+      <textarea type="text" id="create-post-title" name="create-post-title"></textarea>
     </div>
-    <div>
-      <label for="post-text">Post Text</label>
-      <input id="post-text" name="post-text" />
+    <div id="new-post-text-div">
+      <label for="create-post-text">Post Text</label>
+      <textarea id="create-post-text" name="create-post-text"></textarea>
     </div>
     <button type="submit" class="btn">Create</button>
   </form>
 </section>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
+<section class="dashboard-posts">
+  <h2 id="db-yourposts">Your Posts</h2>
+  <ol class="dashboard-post-list">
     {{#each posts as |post|}}
-    <li>
+    <li class="db-singlepost">
       {{> post-info post}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
     </li>

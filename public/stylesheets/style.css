@@ -7,5 +7,104 @@ body, html {
     padding: 0%;
     margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: blue;
+    color: black;
+    background-color: #C3C49E;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header { 
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%
+}
+
+/* post info */
+
+.post-list{
+    list-style-type: none;
+    width: 75%;
+    margin: auto;
+}
+
+.post-li {
+    border-style: solid;
+    margin-bottom: 6px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #524632;
+    color: white;
+}
+
+#posted-by {
+    color: #DEDBD8
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+#title-heading {
+    font-size: 1.75rem;
+}
+
+.post-text {
+display: flex;  
+justify-content: center;
+align-items: center;
+font-size: 1.25rem ;
+padding: 6px 0px
+}
+
+
+/* dashboard styling */
+#db-create-new {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.new-post-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#new-post-title-div, #new-post-text-div {
+    margin-right: 10px;
+}
+
+
+
+.dashboard-posts {
+    width: 75%;
+    margin: auto;
+}
+
+.dashboard-post-list {
+    list-style-type: none;
+}
+
+.db-singlepost {
+    border-style: solid;
+    margin-bottom: 6px;
+}
+
+#db-yourposts {
+    display: flex;
+    justify-content: center;
+
 }
