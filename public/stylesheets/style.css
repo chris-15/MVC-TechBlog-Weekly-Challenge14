@@ -162,3 +162,15 @@ padding: 6px 0px
     color: white;
   }
 
+/* login / signup page styling */
+.login-form{
+    margin: 10px;
+}
+
+.signup-form {
+    margin: 10px;
+}
+
+.login-page-divs {
+    margin-bottom: 6px;
+}
