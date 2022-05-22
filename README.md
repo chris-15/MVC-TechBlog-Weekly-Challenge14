@@ -13,7 +13,7 @@
 
 ## Description
 
-This weeks challenge was to create a Tech blog website where users can log in to create posts and comment on other posts. The challenge was to test our ability to construct the website using the MVC paradigm and using various node.js packages credited below in [Credits](#credits).
+This weeks challenge was to create a Tech blog website where users can log in to create posts and comment on other posts. The challenge was to test our ability to construct the website using the MVC paradigm and using various node.js packages credited below in [Credits](#credits). Sequelize was used in conjuction with MySQL for the the backend database and express.js was used for the backend. Handlebars was used for the front end implementation.
 
 The deployed application can be found [here](https://young-reaches-69054.herokuapp.com/).
 
