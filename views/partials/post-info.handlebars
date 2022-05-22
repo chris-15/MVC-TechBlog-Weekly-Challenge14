@@ -1,12 +1,13 @@
 <article class="post">
 
   <div class="title">
-   
+
     <h4 id="posted-by"> {{user.username}} - {{format_date created_at}}</h4>
-     <a class="link" href="/post/{{id}}">
+    <a class="link" href="/post/{{id}}">
       <h3 id="title-heading">{{title}}</h3>
     </a>
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}">{{comments.length}}
+      {{format_plural "comment" comments.length}}</a>
   </div>
 
   <div class="post-text">
