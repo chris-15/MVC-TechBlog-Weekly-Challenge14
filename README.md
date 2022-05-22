@@ -43,7 +43,7 @@ Tests using jest were conducted to test functionality of helper functions. Run t
 - [Bcrypt Documentation](https://www.npmjs.com/package/bcrypt)
 - [Express-Session Documentation](https://www.npmjs.com/package/express-session)
 - [Connect-Session-Sequelize Documentation](https://www.npmjs.com/package/connect-session-sequelize)
--[Jest](https://jestjs.io/docs/getting-started)
+- [Jest](https://jestjs.io/docs/getting-started)
 
 ## License
 
