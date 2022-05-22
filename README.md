@@ -27,7 +27,7 @@ Deployed application found here: [The Tech Blog](https://young-reaches-69054.her
 
 ## Tests
 
-No tests conducted for this application but the users can test the GET, POST, PUT, and DELETE requests using Insomnia.
+Tests using jest were conducted to test functionality of helper functions. Run the command <code>npm run test</code>.
 
 ## Credits
 
@@ -43,6 +43,7 @@ No tests conducted for this application but the users can test the GET, POST, PU
 - [Bcrypt Documentation](https://www.npmjs.com/package/bcrypt)
 - [Express-Session Documentation](https://www.npmjs.com/package/express-session)
 - [Connect-Session-Sequelize Documentation](https://www.npmjs.com/package/connect-session-sequelize)
+-[Jest](https://jestjs.io/docs/getting-started)
 
 ## License
 
